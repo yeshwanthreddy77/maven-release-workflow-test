@@ -9,7 +9,7 @@ properties([
 
     stage("Checkout") {
       checkout scm
-      stash includes: '**', name: 'project'
+      //stash includes: '**', name: 'project'
     }
 
     stage("Set Version") {
