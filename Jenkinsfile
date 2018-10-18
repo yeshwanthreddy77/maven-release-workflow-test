@@ -6,7 +6,6 @@ properties([
         ])
 ])
 
-node("jenkins-slave") {
 
     stage("Checkout") {
       checkout scm
@@ -71,7 +70,6 @@ node("jenkins-slave") {
         sh "captain push"
       }
     }
-}
 
 def version() {
     def matcher = readFile('pom.xml') =~ '<version>(\\d*)\\.(\\d*)\\.(\\d*)(-SNAPSHOT)*</version>'
